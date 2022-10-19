@@ -49,6 +49,8 @@ void loop() {
     } else {
       changeLeds(B00000000);
     }
+  } else if(cmd.value == 0xFFE21D) {
+    changeLeds(B00000000);
   } else if (cmd.value == 0xFF30CF) {
     toggleLed(7);
   } else if (cmd.value == 0xFF18E7) {

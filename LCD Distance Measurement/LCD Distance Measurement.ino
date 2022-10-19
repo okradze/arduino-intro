@@ -1,5 +1,5 @@
 #include <LiquidCrystal.h>
-LiquidCrystal lcd(7,8,9,10,11,12);
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 
 const int triggerPin = 3;
 const int echoPin = 2;
@@ -34,11 +34,11 @@ void loop() {
 
   int buttonVal = digitalRead(buttonPin);
 
-  while(buttonVal == 1) {
+  while (buttonVal == 1) {
     buttonVal = digitalRead(buttonPin);
   }
 
-  while(buttonVal == 0) {
+  while (buttonVal == 0) {
     buttonVal = digitalRead(buttonPin);
   }
 
@@ -48,7 +48,7 @@ void loop() {
 
   float totalDistance = 0;
 
-  for(int i = 0; i < countOfMeasurements; i++) {
+  for (int i = 0; i < countOfMeasurements; i++) {
     totalDistance += measureDistance();
   }
 
